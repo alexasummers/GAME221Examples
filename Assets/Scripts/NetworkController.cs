@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class NetworkController : MonoBehaviour
+public class NetworkController : MonoBehaviourPunCallbacks
 {
     void Start()
     {
@@ -12,6 +12,6 @@ public class NetworkController : MonoBehaviour
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("We are now connected to the " + PhotonNetwork.ClourRegion + " server!");
+        Debug.Log("We are now connected to the " + PhotonNetwork.CloudRegion + " server!");
     }
 }
